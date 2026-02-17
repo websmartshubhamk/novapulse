@@ -2,16 +2,23 @@
 
 import { useEffect } from 'react'
 import Lenis from 'lenis'
+import { gsap, ScrollTrigger } from '.'
 
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const lenis = new Lenis({ lerp: 0.08, smoothWheel: true })
-    function raf(time: number) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
+
+    lenis.on('scroll', ScrollTrigger.update)
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000)
+    })
+    gsap.ticker.lagSmoothing(0)
+
+    return () => {
+      gsap.ticker.remove(lenis.raf as any)
+      lenis.destroy()
     }
-    requestAnimationFrame(raf)
-    return () => lenis.destroy()
   }, [])
 
   return <>{children}</>
