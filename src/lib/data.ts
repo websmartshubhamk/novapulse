@@ -54,15 +54,16 @@ export interface Project {
   title: string
   category: string
   gradient: string
+  image: string
 }
 
 export const projects: Project[] = [
-  { title: 'Neon District', category: 'Web', gradient: 'from-purple-600 to-cyan-500' },
-  { title: 'Pulse Mobile', category: 'Mobile', gradient: 'from-cyan-500 to-blue-600' },
-  { title: 'Vortex Brand', category: 'Branding', gradient: 'from-pink-500 to-purple-600' },
-  { title: 'GridRunner', category: 'Web', gradient: 'from-blue-500 to-purple-500' },
-  { title: 'DataStream', category: 'Mobile', gradient: 'from-purple-500 to-pink-500' },
-  { title: 'Synthwave ID', category: 'Branding', gradient: 'from-cyan-600 to-purple-600' },
+  { title: 'Neon District', category: 'Web', gradient: 'from-purple-600 to-cyan-500', image: '/projects/neon-district.svg' },
+  { title: 'Pulse Mobile', category: 'Mobile', gradient: 'from-cyan-500 to-blue-600', image: '/projects/pulse-mobile.svg' },
+  { title: 'Vortex Brand', category: 'Branding', gradient: 'from-pink-500 to-purple-600', image: '/projects/vortex-brand.svg' },
+  { title: 'GridRunner', category: 'Web', gradient: 'from-blue-500 to-purple-500', image: '/projects/gridrunner.svg' },
+  { title: 'DataStream', category: 'Mobile', gradient: 'from-purple-500 to-pink-500', image: '/projects/datastream.svg' },
+  { title: 'Synthwave ID', category: 'Branding', gradient: 'from-cyan-600 to-purple-600', image: '/projects/synthwave-id.svg' },
 ]
 
 export const showcaseFilters = ['All', 'Web', 'Mobile', 'Branding']

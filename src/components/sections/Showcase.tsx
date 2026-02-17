@@ -43,7 +43,8 @@ export function Showcase() {
               className="group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer"
               data-section-item
             >
-              <div className={cn('absolute inset-0 bg-gradient-to-br', project.gradient)} />
+              <img src={project.image} alt={project.title} className="absolute inset-0 h-full w-full object-cover" />
+              <div className={cn('absolute inset-0 bg-gradient-to-br opacity-40', project.gradient)} />
               <div className="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/50" />
               <div className="relative flex h-full flex-col justify-end p-6">
                 <span className="mb-2 inline-block w-fit rounded-full bg-[rgba(0,0,0,0.4)] px-3 py-1 text-xs text-[#f0e6ff]/80">
